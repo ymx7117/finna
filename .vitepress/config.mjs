@@ -2,42 +2,45 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Finna产品手册",
-   base: "/docs-finna/",
+   base: "/finna/",
   description: "A VitePress Site",
   head: [["link", { rel: "icon", href: "/docs-finna/logo.svg" }]],
   themeConfig: {
     outlineTitle:"目录",
-    outline:[2,6],
+    outline:[1,6],
     logo:'/logo.svg',
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', items:[
-        {text:'第一个',link:'/'},
-        {text:'第二个',link:'/api-examples'},
-        {text:'fontnUM1',link:'/fontNum1/'}
-      ] },
-      { text: 'Examples', link: '/markdown-examples' }
+    nav: [{text:'文档',link:'/第一章'}
     ],
-    sidebar: {
-       "/fontNum1/":[
+    // sidebar: {
+    //    "/fontNum1/":[
 
-          { text: '第一章 产品概览', link: '/fontNum1/第一章' ,
-          },
-          { text: '第二章 快速上手', link: '/fontNum1/第二章' },
-          { text: '第三章 应用开发', link: '/fontNum1/第三章' },
-          { text: '第四章 模型', link: '/fontNum1/第四章' },
-          { text: '第五章 知识库（跳转知识库平台）', link: '/fontNum1/第五章' },
-          { text: '第六章 插件', link: '/fontNum1/第六章' },
-          { text: '第七章', link: '/fontNum1/第七章' },
-          { text: '第八章', link: '/fontNum1/第八章' },
-          { text: '第九章', link: '/fontNum1/第九章' },
+    //       { text: '第一章 产品概览', link: '/fontNum1/第一章' ,
+    //       },
+    //       { text: '第二章 快速上手', link: '/fontNum1/第二章' },
+    //       { text: '第三章 应用开发', link: '/fontNum1/第三章' },
+    //       { text: '第四章 模型', link: '/fontNum1/第四章' },
+    //       { text: '第五章 知识库（跳转知识库平台）', link: '/fontNum1/第五章' },
+    //       { text: '第六章 插件', link: '/fontNum1/第六章' },
+    //       { text: '第七章', link: '/fontNum1/第七章' },
+    //       { text: '第八章', link: '/fontNum1/第八章' },
+    //       { text: '第九章', link: '/fontNum1/第九章' },
       
-       ]
+    //    ]
       
-      },
+    //   },
+    sidebar: false, // 关闭侧边栏
+    aside: "left", // 设置右侧侧边栏在左侧显示
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      {
+        icon: {
+          svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                 <image href="finna-logo.png" width="24" height="24"/>
+               </svg>`
+        },
+        link: 'https://www.finna.com.cn'
+      }
     ],
     footer:{
       copyright:'版权所有 © 2023-present Vue.js'
